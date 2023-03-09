@@ -8,11 +8,7 @@ const data = {count: 100}
 
 const testCase = defaults( data,{count:101,matches:200} )
 
-const testCaseTwo = defaults( data, {seasons:100, count:111})
-
-
 console.log(food)
 
 console.log(testCase)
 
-console.log(testCaseTwo)
