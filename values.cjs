@@ -4,14 +4,10 @@ function values(obj) {
     // http://underscorejs.org/#values
 
     let valObjet = []
-
     for (let i in obj ) {
-
         valObjet.push(obj[i])
     }
-
     return valObjet
-    
 }
 
 module.exports = values;

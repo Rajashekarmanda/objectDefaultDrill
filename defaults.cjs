@@ -3,16 +3,18 @@ function defaults(obj, defaultProps) {
     // Return `obj`.
     // http://underscorejs.org/#defaults
 
-    // let obje = {...obj,...defaultProps}
+    let objectReturn = {...defaultProps,...obj}
 
-    let finalObj = defaultProps
+    // let finalObj = defaultProps
 
-    for (let every in obj ) {
+    // for (let every in obj ) {
 
-        finalObj[every] = obj[every]
-    }
+    //     finalObj[every] = obj[every]
+    // }
 
-    return finalObj
+    // return finalObj
+
+    return objectReturn
 }
 
 module.exports = defaults
