@@ -3,11 +3,16 @@ function values(obj) {
     // Ignore functions
     // http://underscorejs.org/#values
 
-    let valObjet = []
-    for (let i in obj ) {
-        valObjet.push(obj[i])
+
+    if (typeof obj !== 'object' && obj == undefined && obj == null && obj == '' && typeof obj == 'number') {
+        return []
+    } else {
+        let valObjet = []
+        for (let i in obj) {
+            valObjet.push(obj[i])
+        }
+        return valObjet
     }
-    return valObjet
 }
 
 module.exports = values;

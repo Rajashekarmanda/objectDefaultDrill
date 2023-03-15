@@ -7,3 +7,8 @@ const someData = pairs({sachin:100, virat:222, rahul:0, total: 322})
 console.log(objectData)
 
 console.log(someData)
+
+console.log(pairs(undefined))
+console.log(pairs(null))
+console.log(pairs('aaaa'))
+console.log(pairs({}))
