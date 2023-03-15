@@ -3,7 +3,7 @@ function invert(obj) {
     // Assume that all of the object's values will be unique and string serializable.
     // http://underscorejs.org/#invert
 
-    if ( typeof obj !== 'object' && !Array.isArray(obj) && obj == undefined && obj == null && obj == '' && typeof obj == 'string') {
+    if (  obj == undefined || obj == null || obj == '' || typeof obj !== 'object') {
         return {}
     }else if (Array.isArray(obj)){
         let reverseObject = {}
@@ -21,5 +21,3 @@ function invert(obj) {
 }
 
 module.exports = invert;
-
-console.log(typeof 'gggg')

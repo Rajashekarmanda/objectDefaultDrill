@@ -14,6 +14,6 @@ console.log(testCaseThree)
 console.log(invert(undefined))
 console.log(invert(null))
 console.log(invert({}))
-console.log(invert('hello'))
+console.log(invert(''))
 
 
