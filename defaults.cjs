@@ -5,27 +5,28 @@ function defaults(obj, defaultProps) {
 
     if (Array.isArray(obj)) {
         return obj
-
-    }else if (obj== undefined && obj==null ){
+    } else if (obj == undefined && obj == null) {
         return {}
-
-    }else if (typeof obj == 'string'){
+    } else if (typeof obj == 'string') {
         let returnResult = {}
-        for (let each in obj){
-            returnResult[each] = obj[each]
+        for (let eachWord in obj) {
+            returnResult[eachWord] = obj[eachWord]
         }
         return returnResult
-        
     } else {
-        let finalObj = defaultProps
-        for (let eachKey in obj) {
-            if (obj[eachKey] !== undefined && obj[eachKey] !== null && obj[eachKey] !== '') {
-                finalObj[eachKey] = obj[eachKey]
-            } else {
-                finalObj[eachKey] = defaultProps[eachKey]
+        if (defaultProps == undefined) {
+            return obj
+        } else {
+            let finalObj = defaultProps
+            for (let eachKey in obj) {
+                if (obj[eachKey] !== undefined && obj[eachKey] !== null && obj[eachKey] !== '') {
+                    finalObj[eachKey] = obj[eachKey]
+                } else {
+                    finalObj[eachKey] = defaultProps[eachKey]
+                }
             }
+            return finalObj
         }
-        return finalObj
     }
 }
 

@@ -4,8 +4,10 @@ function values(obj) {
     // http://underscorejs.org/#values
 
 
-    if (typeof obj !== 'object' && obj == undefined && obj == null && obj == '' && typeof obj == 'number') {
+    if (typeof obj == 'string' || obj == undefined || obj == null || obj == '' ) {
         return []
+    }else if (Array.isArray(obj)){
+        return obj
     } else {
         let valObjet = []
         for (let i in obj) {
