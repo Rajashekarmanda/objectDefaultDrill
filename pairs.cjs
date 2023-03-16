@@ -18,5 +18,4 @@ function pairs(obj) {
         return arrayConvert
     }
 }
-
 module.exports = pairs

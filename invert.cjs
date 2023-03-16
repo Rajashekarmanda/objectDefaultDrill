@@ -7,8 +7,8 @@ function invert(obj) {
         return {}
     }else if (Array.isArray(obj)){
         let reverseObject = {}
-        for (let [key,val] of Object.entries(obj)){
-            reverseObject[val] = key
+        for (let i in obj){
+            reverseObject[obj[i]] = i
         }
         return reverseObject
     } else {
