@@ -9,12 +9,15 @@ const testCase = defaults( data,{count:101,matches:200} )
 console.log(food)
 console.log(testCase)
 
-console.log(defaults([1,2,3]))
+console.log(defaults({key:''},{key:100,val:'hello'}))
+console.log(defaults({key:undefined},{key:100,val:'world'}))
+console.log(defaults([1,2,3],{count:100,spinkles:'lots'}))
+console.log(defaults([1,2222,322],undefined))
 console.log(defaults([]))
 console.log(defaults(null))
 console.log(defaults(''))
 console.log(defaults(undefined))
 console.log(defaults('Hello'))
-console.log(defaults({name:"raju",location:'hyderabad'}))
+console.log(defaults({name:"raju",location:'hyderabad'},undefined))
 
 
