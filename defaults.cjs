@@ -5,7 +5,7 @@ function defaults(obj, defaultProps) {
 
     if (Array.isArray(obj)) {
         return obj
-    } else if (obj == undefined && obj == null) {
+    } else if (obj == undefined || obj == null) {
         return {}
     } else if (typeof obj == 'string') {
         let returnResult = {}
@@ -31,4 +31,3 @@ function defaults(obj, defaultProps) {
 }
 
 module.exports = defaults
-
